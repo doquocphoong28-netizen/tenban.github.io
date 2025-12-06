@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thư Mời Lễ Tốt Nghiệp</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #fffdfd;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .container {
+        background: rgb(229, 212, 212);
+        padding: 136px;
+        border-radius: 50px;
+        max-width: 800px;
+        margin: auto;
+        box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Slideshow */
+      .slideshow {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        border-radius: 20px;
+        margin-bottom: 20px;
+      }
+
+      .slideshow img {
+        width: 25%;
+        border-radius: 10px;
+      }
+
+      /* Messenger button */
+      .button {
+        background: #0084ff;
+        color: white;
+        padding: 12px 20px;
+        text-decoration: none;
+        border-radius: 10px;
+        display: inline-block;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🎓 Thư Mời Lễ Tốt Nghiệp</h1>
+      <p style="color: rgb(213, 129, 186)">
+        Mời Bạn Yêu Đến Dự Lễ Tốt Nghiệp Của Mình
+      </p>
+      <!-- Slideshow ảnh -->
+      <div class="slideshow"><img id="slide-img" src="" /></div>
+
+      <h3>📅 Thời gian:</h3>
+      <p>9:30-10:30 AM – Ngày 18/01/2026</p>
+
+      <h3>📍 Địa điểm:</h3>
+      <p>Sân Trường - Trường THPT Lý Nhân Tông</p>
+      <hr />
+      <p>Nếu cần liên hệ, nhấn vào Messenger bên dưới:</p>
+
+      <!-- Nút Messenger -->
+      <a class="button" href="https://m.me/.qphong.567968" target="_blank">
+        Nhắn cho mình qua Messenger
+      </a>
+    </div>
+
+    <script>
+      /* Danh sách ảnh chuyển động */
+      const images = [
+        " img/z7299386064916_0229c943b093fd097ce36b4cddf940aa.jpg",
+        " img/z7299226241414_d0721398e8bb5e19f39274342b408acb.jpg",
+      ];
+
+      let index = 0;
+
+      /* Hàm đổi ảnh */
+      function changeSlide() {
+        document.getElementById("slide-img").src = images[index];
+        index = (index + 1) % images.length;
+      }
+
+      /* Chạy ảnh lần đầu */
+      changeSlide();
+
+      /* Chuyển ảnh mỗi 2.5 giây */
+      setInterval(changeSlide, 2500);
+    </script>
+  </body>
+</html>
